@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.heading_XL{
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 88px;
+}
+
+.heading_L{
+  font-size: 48px;
+  font-weight: 700;
+  ;line-height: 56px;
+}
+
+.heading_M{
+  font-size: 24;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.text{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
