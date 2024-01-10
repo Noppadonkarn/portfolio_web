@@ -11,11 +11,11 @@ export function Project() {
           CONTACT ME
         </div>
       </div> 
-      <div className="flex flex-warp">
+      <div className="flex flex-warp pb-[70px]">
         {
           Projects.map((items) => {
             return (
-              <div></div>
+              <div className=""></div>
             )
           })
         }

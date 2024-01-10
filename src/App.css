@@ -1,27 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
 
 .heading_XL{
   font-size: 88px;
   font-weight: 700;
   line-height: 88px;
+  color: white;
 }
 
 .heading_L{
   font-size: 48px;
   font-weight: 700;
   ;line-height: 56px;
+  color: white;
+}
+
+.heading_X{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  color: white;
 }
 
 .heading_M{
-  font-size: 24;
+  font-size: 24px;
   font-weight: 700;
   line-height: 32px;
+  color: white;
 }
 
 .text{
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
+  color: white;
 }
