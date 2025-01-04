@@ -1,11 +1,6 @@
 <template>
   <v-container>
-    <v-tabs
-      v-model="tab"
-      align-tabs="end"
-      color="deep-purple-accent-4"
-      @input="updateTab"
-    >
+    <v-tabs v-model="tab" align-tabs="end" color="deep-purple-accent-4">
       <v-container>
         <v-row class="gap-3" align="center">
           <v-avatar size="40" :image="avatarprofile"></v-avatar>
@@ -29,20 +24,14 @@
 import avatarprofile from "@/src/assets/images/avater_profile.svg";
 
 export default {
-  props: {
-    tab: {
-      type: String,
-      default: "home",
-    },
-  },
   data() {
     return {
       avatarprofile,
-      tab: this.tab,
+      tab: "home",
     };
   },
-  methods: {
-    updateTab(newTab) {
+  watch: {
+    tab(newTab) {
       this.$emit("update:tab", newTab);
     },
   },
