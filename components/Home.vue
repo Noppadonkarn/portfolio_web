@@ -18,7 +18,7 @@
       </div>
 
       <!-- Tabs Section -->
-      <div class="h-screen py-16">
+      <div class="h-[90vh] py-16">
         <p class="text-2xl font-bold">My Projects</p>
         <v-slide-group
           v-model="model"
@@ -34,7 +34,7 @@
               <v-card
                 :class="['ma-4', selectedClass]"
                 color="grey-lighten-1"
-                height="700"
+                height="500"
                 width="375"
                 v-bind="props"
                 @click="toggle"
@@ -62,17 +62,19 @@
             </v-hover>
           </v-slide-group-item>
         </v-slide-group>
+        
       </div>
     </div>
   </v-container>
+  <Footer />
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import SectionOne from "./SectionOne.vue";
 import SectioneTwo from "./SectioneTwo.vue";
+import Footer from "./Footer.vue";
 import { Project } from "@/src/assets/data/project.ts";
-import { Stack } from "@/src/assets/data/stack.ts";
 
 const isScrolledProject = ref(false);
 const isScrolledIntro = ref(true);
@@ -80,7 +82,6 @@ const projects = Project;
 
 const onScroll = () => {
   const scrollY = window.scrollY;
-  isScrolledIntro.value = scrollY < 400;
   isScrolledProject.value = scrollY > 200;
 };
 
